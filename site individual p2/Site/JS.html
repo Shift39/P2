@@ -9,6 +9,85 @@
     <link rel="shortcut icon" href="png-transparent-nerv-rebuild-of-evangelion-logo-others-text-angel-decal-removebg-preview.ico" type="image/x-icon">
 </head>
 <body>
-    
+        
+<div class="nav">
+    <ul>
+    <li><a href="Projeto individual 2.html">Home</a></li>
+    <li><a href="Perfil.html">Perfil</a></li>
+    <li><a href="provas.html">Provas</a></li>
+   <li style="float:right"><a class="active" href="#about">Contate-nos</a></li>
+  </ul>
+</div> 
+
+
+<div class="prova">
+
+    <div class="pergunta" id="pergunta">Como Definir uma função?</div>
+    <div class="resposta">
+
+        <span class="io"> <input type="text" id="A">
+            <div class="A" id="A">zzzz</div>
+        </span>
+
+
+        <button id="resp" onclick="Prova()"></button>
+
+</div>
+
+
 </body>
+
 </html>
+
+
+<script>
+
+    var tentativa = 0;
+
+    function trivial(params) {
+        
+
+    }
+    var pont = 0;
+    var nota = 0;
+    function Prova(params) {
+        pont++;
+
+
+        if (A.value == 'function()' && pont == 0) {
+            nota++
+            pergunta.innerHTML = 'O que é um ID?'
+
+        }
+
+        if (A.value == 'identificação unica' && pont == 1) {
+            nota++
+            pergunta.innerHTML = 'O que o botão faz nesta pagina?'
+
+        }
+
+        if (A.value == 'executa uma função' && pont == 2) {
+            nota++
+            pergunta.innerHTML = 'informe a função que troca textos em paginas web'
+
+        }
+
+        if (A.value == 'innerHTML' && pont == 3) {
+            nota++
+            pergunta.innerHTML = 'Complete a frase: Java script é uma ......'
+
+        }
+
+        if (A.value == 'Linguagem de programação' && pont == 4) {
+            nota++
+            pergunta.innerHTML = 'Esta linguagem é um java simplificado, estamos falando do?'
+
+        }
+        if (A.value == 'python' && pont == 5) {
+            
+            pergunta.innerHTML = 'Resultado: <br>'
+            /*Coloque o canvas aqui amanhã*/
+
+        }
+    }
+</script>

@@ -282,3 +282,77 @@ body{
     background: black;
     color: #fff;
 }
+.ficha{
+    margin-top: 200px;
+    height: 620px;
+    width: 83%;
+    border: 2px solid gold;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.911);
+    margin-bottom: 200px;
+    margin-left: 140px;
+}
+.esquerda{
+    margin-left: 140px;
+    width: 20%;
+    height: 800px;
+    border: 2px solid gold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.iu{
+    margin-left: 85px;
+    font-size: 30px;
+    margin-top: 70px;
+}
+.direita{
+    width: 60%;
+    height: 600px;
+    border: 2px solid gold;
+}
+.rosto{
+    margin-left: 2px;
+    height: 250px;
+    border: 2px solid darkviolet;
+    border-radius: 46%;
+}
+.I_P{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-top: 100px;
+    
+}
+.prova{
+    height: 700px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-left: 400px;
+    border: 2px solid darkblue;
+    background-color: rgba(0, 0, 0, 0.911);
+    margin-bottom: 200px;
+}
+.pergunta{
+    height: 400px;
+    width: 100%;
+    border: 2px solid darkblue;
+}
+.io{
+    display: flex;
+    color: white;
+    width: 60%;
+    margin-left: 300px;
+}
+.resposta{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

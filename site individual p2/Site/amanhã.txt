@@ -1,3 +1,1 @@
-
-pagina de perfil
-Banco de dados
+melhorar a pagina de perfil e começar os routes
