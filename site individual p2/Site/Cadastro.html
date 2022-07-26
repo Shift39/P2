@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/Css.css">
+<link rel="shortcut icon" href="css/png-transparent-nerv-rebuild-of-evangelion-logo-others-text-angel-decal-removebg-preview.ico" type="image/x-icon">
+
+</head>
+<body>
+    
+
+
+<div class="nav">
+    <ul>
+    <li><a href="Projeto individual 2.html">Home</a></li>
+    <li><a href="Perfil.html">Perfil</a></li>
+    <li><a href="provas.html">Provas</a></li>
+    <li><a href="Cadastro.html">Login/Cadastro</a></li>
+   <li style="float:right"><a class="active" href="#about">Contate-nos</a></li>
+  </ul>
+</div> 
+
+
+
+    <div class="pg">
+        <div class="cad">
+
+            <span class="tipo_campo">E-mail:</span>
+            <input id="email_input" type="text" placeholder="Login" class="inp">
+            <br>
+            <br>
+
+            <span class="tipo_campo">Senha:</span>
+            <input id="senha_input" type="password" placeholder="******" class="inp">
+            <br>
+            <br>
+
+            <button class="btn" onclick="entrar()">Entrar</button>
+
+
+        </div>
+        <div class="astro"> 
+            
+            <span class="tipo_campo">Nome:</span>
+            <input id="nome_input" type="text" placeholder="Seu nome" class="inp">
+            <br>
+            <br>
+
+            <span class="tipo_campo">E-mail:</span>
+            <input id="email_input" type="text" placeholder="meuemail@provedor.com" class="inp">
+            <br>
+            <br>
+
+            <span class="tipo_campo">Senha:</span>
+            <input id="senha_input" type="password" placeholder="******" class="inp">
+            <br>
+            <br>
+
+            <span class="tipo_campo">Confirmação da Senha:</span>
+            <input id="confirmacao_senha_input" type="password" placeholder="******" class="inp">
+            <br>
+            <br>
+
+            <button class="btn" onclick="cadastrar()">Cadastrar</button>
+
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmaVar = confirmacao_senha_input.value;
+
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "") {
+            alert("Preencha todos os campos por favor!");
+
+            finalizarAguardar();
+            return false;
+
+            
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+        if (emailVar.indexOF("@") == -1 || emailVar.indexOf(".com") == -1) {
+            alert("O campo de email deve conter os seguintes caracteres especiais para que seja valido '@' e '.com' ");
+
+            finalizarAguardar();
+            return false;
+
+            
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+        if (senhaVar != confirmaVar) {
+            alert("Aviso, senhas divergentes");
+
+            finalizarAguardar();
+            return false;
+
+            
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        fetch("/RotaUser/sign", {
+            method: "POST",
+            headers: {
+                "Content-type": "aplication/json"
+            },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log('Resposta:', resposta)
+
+            if (resposta.ok) {
+                alert("Sucesso absoluto!")
+                window.location = "Perfil.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else{
+                alert('Ops, deu erro!');
+            }
+
+            
+        }
+
+        ).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+        return false;
+    }
+
+
+    function entrar(params) {
+        aguardar();
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+
+        if (emailVar == "" || senhaVar == "") {
+            
+            alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+           
+            alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/RotaUser/log",{
+            method:"POST",
+            headers: {
+                "Content-type":"application/json"
+            }body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }
+        ).then(function (resposta) {
+
+            console.log('Estou finalizando o processo de entrada')
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json=>{
+                    console.log(json)
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000);
+                })
+            } else {
+                console.log("Houve um erro no login")
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+
+        }
+
+        ).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false
+        
+    }
+</script>

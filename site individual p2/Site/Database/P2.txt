@@ -1,0 +1,19 @@
+create database P2;
+use P2;
+
+
+create table Aluno (
+ID int primary key, 
+Nome varchar (40),
+Tentativa int,
+ProvaChave int,
+Acertos int);
+
+create table Provas(
+idProva int primary key, 
+NomeProva varchar (40),
+QtdPerguntas int);
+
+insert into provas values ( 1, 'Java_Script', 5),
+						  (2, 'CSS', 7),
+                          (3, 'HTML', 10);

@@ -1,0 +1,419 @@
+body{
+    min-height: 350px;
+ 
+
+    background-attachment: fixed;
+    background-position: center;
+
+    background-size: cover;
+    height: 800;
+    width: 100%;
+    border: 1px solid violet;
+    background-image: url('1155226.png');
+    
+   
+    border-top: 0px;
+    background-repeat: no-repeat;
+    color: black;
+    
+}
+.paralax {
+    right: 0;
+    color: black;
+    
+    background-size: cover;
+    height: 750px;
+    width: 100%;
+    left: 0;
+    display: flex;
+}
+.gama{
+    border: none;
+    height: 570px;
+    width: 80%;
+    border: 2px solid darkviolet;
+    margin-top: 180px;
+    margin-left: 200px;
+    background-image: url('859424-removebg-preview.png');
+    background-size: cover;
+}
+.energia{ 
+    margin-left: 290px;
+    margin-top: 290px;
+    width: 50%;
+    height: 200px;
+    border: 2px solid darkviolet;
+    color: white;
+    font-size: 80px;
+}
+.bot{
+    border: 2px solid green;
+    height: 70px;
+    width: 20%;
+    margin-left: 625px;
+    margin-top: 70px;
+    font-size: 50px;
+    justify-content: center;
+    display: flex;
+}
+.bot .i-d{
+    height: 10px;
+}
+.i{
+    margin-top: 200px;
+    color: black;
+    position: center;
+
+    font-size: 70px;
+    margin-left: 480px;
+
+}
+.nav{
+    width: 100%;
+    height: 50px;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.active {
+    background-color: darkviolet;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.nav li a:hover {
+    background-color: black;
+}
+.nav a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo { 
+    right: 0;
+    left: 0;
+    opacity: 10;
+    height: 500;
+    width: 100%;
+    border: 2px solid gold;
+    background-color: black;
+    display: flex;
+}
+.rodape{
+    right: 0;
+    left: 0;
+    height: 300;
+    width: 100%;
+    border: 2px solid green;
+    display: flex;
+    background-color: black;
+}
+.inf{
+    width: 50%;
+    margin-top: 70px;
+    margin-left: 70px;
+    color: white;
+    font-size: 23px;
+}
+.ling{
+    width: 50%;
+    margin-top: 70px;
+    margin-left: 70px;
+    color: white;
+}
+.ima{
+    margin-top: 10px;
+    margin-left: 80px;
+    height: 400px;
+    width: 100%;
+
+    background-image: url('1554782545-111015-1-1-removebg-preview.png');
+    
+   
+    background-repeat: no-repeat;
+   
+}
+.imag{
+    width: 18%;
+    height: 270px;
+    
+    background-image: url('png-transparent-t-shirt-sprite-ice-evangelion-art-neckline-berserk-purple-head-fictional-character-thumbnail-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: 250px;
+    
+}
+.aud{
+    margin-left: 200px;
+    margin-top: 90px;
+    width: 60%;
+    height: 50px;
+    border: 2px solid gold;
+    color: white;
+    font-size: xx-large;
+    
+}
+.b{
+   color: white;
+    margin-left: 70px;
+}
+.fim{
+    right: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    border: 2px solid gold;
+}
+.provas{
+    width: 90%;
+    height: 1200px;
+    border: solid gold;
+    margin-left: 80px;
+}
+.container{
+    margin-top: 300px;
+    margin-left: 200px;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: darkviolet;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px black;
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: black;
+    color: #fff;
+}
+.ficha{
+    margin-top: 200px;
+    height: 620px;
+    width: 83%;
+    border: 2px solid gold;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.911);
+    margin-bottom: 200px;
+    margin-left: 140px;
+}
+.esquerda{
+    margin-left: 140px;
+    width: 20%;
+    height: 800px;
+    border: 2px solid gold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.iu{
+    margin-left: 85px;
+    font-size: 30px;
+    margin-top: 70px;
+}
+.direita{
+    width: 60%;
+    height: 600px;
+    border: 2px solid gold;
+}
+.rosto{
+    margin-left: 2px;
+    height: 250px;
+    border: 2px solid darkviolet;
+    border-radius: 46%;
+}
+.I_P{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-top: 100px;
+    
+}
+.prova{
+    height: 700px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-left: 400px;
+    border: 2px solid darkblue;
+    background-color: rgba(0, 0, 0, 0.911);
+    margin-bottom: 200px;
+}
+.pergunta{
+    height: 400px;
+    width: 100%;
+    border: 2px solid darkblue;
+}
+.io{
+    display: flex;
+    color: white;
+    width: 60%;
+    margin-left: 300px;
+}
+.resposta{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contatos{
+    height: 500px;
+    width: 50%;
+    border: 2px solid darkviolet;
+    margin-left: 390px;
+    margin-top: 300px;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 200px;
+}
+.beta{
+    height: 50px;
+    width: 50px;
+    margin-left: 150px;
+}
+.caixa{
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.mai_dois{
+    margin-left: 80px;
+}
+.pg{
+    height: 500px;
+    width: 40%;
+    border: solid 2px darkv;
+    background-color:  rgba(0, 0, 0, 0.911);
+    margin-left: 470px;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.cad{
+    margin-top: 80px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    
+}
+.astro{
+    margin-top: 80px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+   
+}
+.inp{
+  background-color: rgba(0, 0, 0, 0.767);
+  border: transparent;
+
+}
+
+

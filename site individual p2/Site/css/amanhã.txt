@@ -1,0 +1,1 @@
+melhorar a pagina de perfil e começar os routes
