@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/Css.css">
+    <link rel="shortcut icon"
+        href="css/png-transparent-nerv-rebuild-of-evangelion-logo-others-text-angel-decal-removebg-preview.ico"
+        type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="nav">
+        <ul>
+            <li><a href="Projeto individual 2.html">Home</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
+            <li><a href="provas.html">Provas</a></li>
+            <li><a href="Cadastro.html">Login/Cadastro</a></li>
+            <li style="float:right"><a class="active" href="#about">Contate-nos</a></li>
+        </ul>
+    </div>
+
+
+    <div class="prova">
+
+        <div class="pergunta" id="pergunta"></div>
+        <div class="resposta">
+
+            <span class="io"> <input type="text" id="A">
+                <div class="A" id="A">zzzz</div>
+            </span>
+
+
+            <button id="resp" onclick="Prova()"></button>
+
+        </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    var tentativa = 0;
+
+    function trivial(params) {
+        
+
+    }
+    var pont = 0;
+    var nota = 0;
+    function Prova(params) {
+        pont++;
+
+
+        if (A.value == 'width' && pont == 0) {
+            nota++
+            pergunta.innerHTML = 'O que define a altura no CSS?'
+
+        }
+
+        if (A.value == 'height' && pont == 1) {
+            nota++
+            pergunta.innerHTML = 'Qual cor representa o seguinte código hexadecimal, #000000?'
+
+        }
+
+        if (A.value == 'preto' && pont == 2) {
+            nota++
+            pergunta.innerHTML = 'O que significa a sigla PX?'
+
+        }
+
+        if (A.value == 'pixel' && pont == 3) {
+            nota++
+            pergunta.innerHTML = 'O que significa a sigla CSS?'
+
+        }
+
+        if (A.value == 'cascading style sheet' && pont == 4) {
+            nota++
+            pergunta.innerHTML = 'Quando foi lançado o CSS?'
+
+        }
+        if (A.value == '1994' && pont == 5) {
+            
+            pergunta.innerHTML = 'Resultado: <br>'
+            /*Coloque o canvas aqui amanhã*/
+
+        }
+    }
+</script>
