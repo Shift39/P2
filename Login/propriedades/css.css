@@ -1,0 +1,25 @@
+
+body{
+    background: linear-gradient(35deg, white 0, darkviolet 16.67%, violet 33.33%, #8953f2 50%, darkblue 66.67%, #0030a7 83.33%, #002286 100%);
+    background-size: 300% 300%;
+}
+
+.container{
+    width: 40vh;
+    height: 50vh;
+    margin-top: 30vh;
+    border: #8953f2 solid 0.2vh;
+    border-radius: 1vh;
+
+}
+.a{
+    margin-top: 10vh;
+}
+
+.btn {
+    margin-left: 14vh;
+}
+.form-check{
+    margin-top: 2vh;
+    margin-left: 8vh;
+}
