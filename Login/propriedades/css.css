@@ -1,7 +1,8 @@
 
 body{
-    background: linear-gradient(35deg, white 0, darkviolet 16.67%, violet 33.33%, #8953f2 50%, darkblue 66.67%, #0030a7 83.33%, #002286 100%);
+    background: linear-gradient(35deg, white , violet 10%, darkviolet 100%);
     background-size: 300% 300%;
+    animation: anima 5s infinite alternate;
 }
 
 .container{
@@ -10,6 +11,7 @@ body{
     margin-top: 30vh;
     border: #8953f2 solid 0.2vh;
     border-radius: 1vh;
+
 
 }
 .a{
@@ -22,4 +24,18 @@ body{
 .form-check{
     margin-top: 2vh;
     margin-left: 8vh;
+}
+
+@keyframes anima{
+    0%{
+        background-position-x: 0%;
+    }
+    
+    50%{
+        background-position-x: 60%;
+    }
+    
+    100%{
+        background-position-x: 100%;
+    }
 }
